@@ -1,0 +1,27 @@
+stavroskostopoulos@Eve:~/Documents/24$ make
+gcc -g -c -lpthread master.c
+gcc -g -c -lpthread dateandlist.c
+gcc -g -c -lpthread hashtable.c
+gcc -g -c -lpthread kouvades.c
+gcc -g -c -lpthread topk.c
+gcc -g -c -lpthread tree.c
+gcc -g -c -lpthread functions.c
+gcc -g -c -lpthread worker.c
+gcc -g -c -lpthread whoServer.c
+gcc -g -c -lpthread whoserverfunctions.c
+gcc -g -c -lpthread whoClient.c
+gcc -g -c -lpthread whoclientfunctions.c
+gcc -g master.o dateandlist.o hashtable.o kouvades.o topk.o tree.o functions.o -o master
+gcc -g worker.o dateandlist.o hashtable.o kouvades.o topk.o tree.o functions.o -o worker
+gcc -g whoServer.o whoserverfunctions.o dateandlist.o hashtable.o kouvades.o topk.o tree.o functions.o -o whoServer -lpthread
+gcc -g whoClient.o dateandlist.o hashtable.o kouvades.o topk.o tree.o functions.o whoclientfunctions.o -o whoClient -lpthread
+
+
+
+
+stavroskostopoulos@Eve:~/Documents/24$ ./whoServer -q 2000 -s 4080 -w 2 -b 5
+
+stavroskostopoulos@Eve:~/Documents/24$ valgrind --trace-children=yes ./master -w 4 -b 8 -s 127.0.1.1 -p 4080 -i Database
+
+stavroskostopoulos@Eve:~/Documents/24$ ./whoClient -q queryfile.txt -w 3 -sp 2000 -sip 127.0.1.1
+

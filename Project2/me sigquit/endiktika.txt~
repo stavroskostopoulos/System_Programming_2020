@@ -1,0 +1,29 @@
+/diseaseFrequency LGV 23-09-1999 28-05-2020
+9
+
+/diseaseFrequency LGV 23-09-1985 28-05-2020
+15
+
+/diseaseFrequency LGV 23-09-1985 28-05-2020 Canada
+1
+
+/searchPatientRecord 15
+15 nar xldpjx STARI 58 21-11-1995 --
+
+/searchPatientRecord 213213
+No patient with such record id was found!
+
+/numPatientAdmissions LGV 23-09-1999 28-05-2020
+China 1
+Germany 3
+Italy 0
+Canada 0
+Greece 2
+USA 0
+Egypt 1
+Turkey 0
+France 2
+Russia 0
+
+/diseaseFrequency LGV 23-09-1999 28-05-2020 Italy
+0
